@@ -37,7 +37,8 @@ public class Main {
             return;
         }
 
-
+        // Translate all the lines
+        // Output all the lines to an html file
 
     }
 
@@ -49,7 +50,7 @@ public class Main {
         }
     }
 
-    public static String checkHeadings(String line) {
+    public static String translateHeadings(String line) {
         line = line.trim();
         char[] chars = line.toCharArray();
         int num = 0;
@@ -65,5 +66,19 @@ public class Main {
 
         int headingLevel = Math.min(num, 6);
         return "<h" + headingLevel + ">" + line.substring(num).trim() + "</h" + headingLevel + ">";
+    }
+
+    public static String translateDisplayEquations(String line) {
+        line = line.trim();
+        String result = "";
+
+        int end = line.length();
+        if(end > 0) {
+            boolean flag = line.substring(0, 2).equals("$$") && line.substring(end-1, end).equals("$$");
+            if(flag) {
+                line.replace("$$", "");
+                result = "<Katex math={" + line + "} displayMode/>";
+            }
+        }
     }
 }
