@@ -6,11 +6,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.File;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String filePath = "../example/file-example.md";
+        String filePath = "fileExample.md";
         List<String> lines = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
@@ -22,7 +21,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        String newFilePath = "../example/htmlFile.html";
+        String newFilePath = "htmlFile.html";
         File file = new File(newFilePath);
 
         try {
@@ -38,47 +37,72 @@ public class Main {
         }
 
         // Translate all the lines
+        String[] result = translate(lines);
+
         // Output all the lines to an html file
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+            for(String s : result) {
+                System.out.println(s);
+                writer.write(s + "\n");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred while writing the html file.");
+            e.printStackTrace();
+        }
 
     }
 
     public static String[] translate(List<String> lines) {
         String[] result = new String[lines.size()];
 
+        int index = 0;
         for(String line : lines) {
-
+            line = "<p>" + line + "</p>";
+            line = translateHeadings(line);
+            line = translateDisplayEquations(line);
+            line = translateInlineEquations(line);
+            result[index] = line;
+            index++;
         }
+
+        return result;
     }
 
     public static String translateHeadings(String line) {
         line = line.trim();
         char[] chars = line.toCharArray();
         int num = 0;
+        boolean flag = false;
 
-        if (chars.length > 0 && chars[0] == '#') {
-            num = 1;
-            while (num < chars.length && chars[num] == '#') {
-                num++;
+        if (chars.length > 0) {
+            for(int i = 0; i < chars.length; i++) {
+                if(chars[i] == '#') {
+                    flag = true;
+                    while(chars[i] == '#') {
+                        num++;
+                        i++;
+                    }
+                    break;
+                }
             }
         } else {
             return line;
         }
 
         int headingLevel = Math.min(num, 6);
-        return "<h" + headingLevel + ">" + line.substring(num).trim() + "</h" + headingLevel + ">";
+        if(flag) {
+            return "<h" + headingLevel + ">" + line.replace("#", "") + "</h" + headingLevel + ">";
+        }
+        return line;
     }
 
     public static String translateDisplayEquations(String line) {
         line = line.trim();
-        String result = "";
+        return line.replaceAll("\\$\\$(.*?)\\$\\$", "<Katex math={\"" + "$1" + "\"} displayMode/>");
+    }
 
-        int end = line.length();
-        if(end > 0) {
-            boolean flag = line.substring(0, 2).equals("$$") && line.substring(end-1, end).equals("$$");
-            if(flag) {
-                line.replace("$$", "");
-                result = "<Katex math={" + line + "} displayMode/>";
-            }
-        }
+    public static String translateInlineEquations(String line) {
+        line = line.trim();
+        return line.replaceAll("\\$(.*?)\\$", "<Katex math={\"" + "$1" + "\"}/>");
     }
 }
