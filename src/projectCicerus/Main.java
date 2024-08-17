@@ -1,3 +1,5 @@
+package projectCicerus;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -9,7 +11,7 @@ import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
-        String filePath = "fileExample.md";
+        String filePath = "FileExample.md";
         List<String> lines = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
@@ -21,7 +23,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        String newFilePath = "htmlFile.html";
+        String newFilePath = "App.svelte";
         File file = new File(newFilePath);
 
         try {
@@ -41,8 +43,9 @@ public class Main {
 
         // Output all the lines to an html file
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+            String boilerPlate = "<script>\n    import Katex from './Katex.svelte';\n</script>\n\n";	
+            writer.write(boilerPlate);
             for(String s : result) {
-                System.out.println(s);
                 writer.write(s + "\n");
             }
         } catch (IOException e) {
@@ -58,51 +61,24 @@ public class Main {
         int index = 0;
         for(String line : lines) {
             line = "<p>" + line + "</p>";
-            line = translateHeadings(line);
-            line = translateDisplayEquations(line);
-            line = translateInlineEquations(line);
+            line = Translate.headings(line);
+            line = Translate.displayEquations(line);
+            line = Translate.inlineEquations(line);
+            line = Translate.textStyling(line);
+
+            char[] chars = line.toCharArray();
+            line  = "";
+            for(char c : chars) {
+                if(c == '\\') {
+                    line += "\\\\";
+                } else {
+                    line += c;
+                }
+            } 
             result[index] = line;
             index++;
         }
 
         return result;
-    }
-
-    public static String translateHeadings(String line) {
-        line = line.trim();
-        char[] chars = line.toCharArray();
-        int num = 0;
-        boolean flag = false;
-
-        if (chars.length > 0) {
-            for(int i = 0; i < chars.length; i++) {
-                if(chars[i] == '#') {
-                    flag = true;
-                    while(chars[i] == '#') {
-                        num++;
-                        i++;
-                    }
-                    break;
-                }
-            }
-        } else {
-            return line;
-        }
-
-        int headingLevel = Math.min(num, 6);
-        if(flag) {
-            return "<h" + headingLevel + ">" + line.replace("#", "") + "</h" + headingLevel + ">";
-        }
-        return line;
-    }
-
-    public static String translateDisplayEquations(String line) {
-        line = line.trim();
-        return line.replaceAll("\\$\\$(.*?)\\$\\$", "<Katex math={\"" + "$1" + "\"} displayMode/>");
-    }
-
-    public static String translateInlineEquations(String line) {
-        line = line.trim();
-        return line.replaceAll("\\$(.*?)\\$", "<Katex math={\"" + "$1" + "\"}/>");
     }
 }
