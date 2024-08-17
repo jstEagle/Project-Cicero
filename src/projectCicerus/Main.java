@@ -11,7 +11,7 @@ import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
-        String filePath = "FileExample.md";
+        String filePath = "complexIntro.md";
         List<String> lines = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
@@ -43,11 +43,13 @@ public class Main {
 
         // Output all the lines to an html file
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
-            String boilerPlate = "<script>\n    import Katex from './Katex.svelte';\n</script>\n\n";	
+            String boilerPlate = "<script>\n    import Katex from './Katex.svelte';\n</script>\n\n <div class=\"note\">\n";	
             writer.write(boilerPlate);
             for(String s : result) {
                 writer.write(s + "\n");
             }
+            String end = "</div>";
+            writer.write(end);
         } catch (IOException e) {
             System.out.println("An error occurred while writing the html file.");
             e.printStackTrace();

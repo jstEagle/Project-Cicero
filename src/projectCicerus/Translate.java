@@ -22,10 +22,10 @@ public class Translate {
             return line;
         }
 
-        int headingLevel = Math.min(num, 6);
+        int headingLevel = Math.min(Math.max(num-1, 1), 6);
         if(flag) {
             line = line.replace("<p>", "").replace("</p>", "");
-            return "<h" + headingLevel + ">" + line.replace("#", "") + "</h" + headingLevel + ">";
+            return "<h" + headingLevel + " class=\"heading\">" + line.replace("#", "") + "</h" + headingLevel + ">";
         }
         return line;
     }
@@ -55,7 +55,7 @@ public class Translate {
             }
 
             if (flag && test.length() >= 3) {
-                return "<h3><center>________________________________________</center></h3>";
+                return "<h3 class=\"divider\">___</h3>";
             }
         }
         
