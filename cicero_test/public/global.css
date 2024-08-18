@@ -89,3 +89,24 @@ p {
 	max-width: 50%;
 	font-weight: normal;
 }
+
+img {
+    display: block;
+    margin: 10px auto;
+    max-width: 60%;
+}
+
+@media (max-width: 1400px) {
+	.note {
+		font-size: 12px;
+	}
+
+	img {
+		max-width: 50%;
+	}
+
+	p {
+		padding: 0 auto;
+		margin: 0 auto;
+	}
+}

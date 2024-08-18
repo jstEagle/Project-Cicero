@@ -62,4 +62,27 @@ public class Translate {
         line = line.replaceAll("\\*\\*(.*?)\\*\\*", "<b>" + "$1" + "</b>");
         return line.replaceAll("_(.?)_", "<i>" + "$1" + "</i>");
     }
+
+    public static String imageLinks(String line) {
+        line = line.trim();
+        String test = line.replace("<p>", "").replace("</p>", "");
+
+        if(test.length() < 3) {
+            return line;
+        }
+
+        if(test.substring(0, 3).equals("![[")) {
+            line = test.substring(3, test.length()-2);
+            line = "<img src=\"/Attachements/" + line.replace(" ", "") + "\" alt=\"diagram\">";
+            return line;
+        }
+        return line;
+    }
+
+    public static String pageLinks(String line) {
+        line = line.trim();
+        String test = line.replace("<p>", "").replace("</p>", "");
+
+        
+    }
 }

@@ -11,7 +11,7 @@ import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
-        String filePath = "complexIntro.md";
+        String filePath = "imgTest.md";
         List<String> lines = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
@@ -67,6 +67,7 @@ public class Main {
             line = Translate.displayEquations(line);
             line = Translate.inlineEquations(line);
             line = Translate.textStyling(line);
+            line = Translate.imageLinks(line);
 
             char[] chars = line.toCharArray();
             line  = "";
