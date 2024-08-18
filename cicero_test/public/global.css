@@ -96,9 +96,9 @@ img {
     max-width: 60%;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1920px) {
 	.note {
-		font-size: 12px;
+		font-size: 14px;
 	}
 
 	img {
