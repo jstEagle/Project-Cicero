@@ -55,7 +55,7 @@ public class Translate {
             }
 
             if (flag && test.length() >= 3) {
-                return "<h3 class=\"divider\">___</h3>";
+                return "<h3 class=\"divider\">Made by jstEagle ;)</h3>";
             }
         }
         
@@ -82,7 +82,14 @@ public class Translate {
     public static String pageLinks(String line) {
         line = line.trim();
         String test = line.replace("<p>", "").replace("</p>", "");
+        String copy = test;
 
-        
+        if (test.replaceAll("\\[\\[(.*?)\\]\\]", "$1").length() < copy.length()) {
+            line = test.replaceAll("\\[\\[(.*?)\\]\\]", "$1").trim();
+            String link = line.replace(" ", "");
+            line = "<div class=\"link-container\"><a href=\"/" + link + "\">" + line + "</a></div>";
+            return line;
+        }
+        return line;
     }
 }

@@ -1,5 +1,6 @@
 ### The modulus-argument form of complex numbers
 The position of the point $z$ in an Argand diagram can be described by means of the length of the line connecting this point to the origin, and the angle which this line makes with the positive real axis.
+[[other math topic]]
 __________
 $$\arg(zw) = \arg(z) + \arg(w)$$
 $$\arg(\frac{z}{w}) = \arg(z) - \arg(w)$$

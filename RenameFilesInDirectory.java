@@ -3,7 +3,7 @@ import java.nio.file.*;
 
 public class RenameFilesInDirectory {
     public static void main(String[] args) {
-        Path directoryPath = Paths.get("cicero_test/Attachements"); // Replace with your directory path
+        Path directoryPath = Paths.get("folderTest"); // Replace with your directory path
 
         try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(directoryPath)) {
             for (Path path : directoryStream) {

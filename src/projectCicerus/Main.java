@@ -1,83 +1,82 @@
 package projectCicerus;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.FileReader;
+import java.nio.file.*;
+import java.nio.charset.StandardCharsets;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
-        String filePath = "imgTest.md";
-        List<String> lines = new ArrayList<>();
+        Path directoryPath = Paths.get("folderTest");
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
-            String line;
-            while((line = reader.readLine()) != null) {
-                lines.add(line);
+        try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(directoryPath)) {
+            for (Path path : directoryStream) {
+                if (Files.isRegularFile(path)) {
+                    // Read lines from the file and add to the list
+                    List<String> fileLines = Files.readAllLines(path, StandardCharsets.UTF_8);
+                    String fileName = path.getFileName().toString().replace(".md", "");
+
+                    // Create the new directory for the file
+                    Path newRoute = Paths.get(fileName);
+                    if (Files.notExists(newRoute)) {
+                        Files.createDirectory(newRoute);
+                        System.out.println("Directory Created: " + newRoute.toString());
+                    } else {
+                        System.out.println("Directory already exists!");
+                    }
+
+                    // Create the new file inside the new directory
+                    Path newFilePath = Paths.get(newRoute.toString(), "+page.svelte");
+                    if (Files.notExists(newFilePath)) {
+                        Files.createFile(newFilePath);
+                        System.out.println("File Created: " + newFilePath.getFileName());
+                    } else {
+                        System.out.println("File already exists!");
+                    }
+
+                    // Translate all the lines
+                    String[] result = translate(fileLines);
+
+                    // Prepare content for writing
+                    StringBuilder contentBuilder = new StringBuilder();
+                    String boilerPlate = "<script>\n    import Katex from '$lib/Katex.svelte';\n    import '$lib/global.css'\n</script>\n\n<svelte:head><title>" + fileName + "</title></svelte:head><div class=\"note\">\n   <h1 class=\"title\">" + fileName + "</h1>\n";
+                    contentBuilder.append(boilerPlate);
+                    for (String s : result) {
+                        contentBuilder.append(s).append("\n");
+                    }
+                    String end = "</div>";
+                    contentBuilder.append(end);
+
+                    // Write all the lines to the new file
+                    try {
+                        Files.write(newFilePath, contentBuilder.toString().getBytes(StandardCharsets.UTF_8));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        String newFilePath = "App.svelte";
-        File file = new File(newFilePath);
-
-        try {
-            if(file.createNewFile()) {
-                System.out.println("File Created: " + file.getName());
-            } else {
-                System.out.println("File already exists!");
-            }
-        } catch (IOException e) {
-            System.out.println("An error occured while creating the file!");
-            e.printStackTrace();
-            return;
-        }
-
-        // Translate all the lines
-        String[] result = translate(lines);
-
-        // Output all the lines to an html file
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
-            String boilerPlate = "<script>\n    import Katex from './Katex.svelte';\n</script>\n\n <div class=\"note\">\n";	
-            writer.write(boilerPlate);
-            for(String s : result) {
-                writer.write(s + "\n");
-            }
-            String end = "</div>";
-            writer.write(end);
-        } catch (IOException e) {
-            System.out.println("An error occurred while writing the html file.");
-            e.printStackTrace();
-        }
-
     }
 
     public static String[] translate(List<String> lines) {
         String[] result = new String[lines.size()];
 
         int index = 0;
-        for(String line : lines) {
+        for (String line : lines) {
             line = "<p>" + line + "</p>";
             line = Translate.headings(line);
             line = Translate.displayEquations(line);
             line = Translate.inlineEquations(line);
             line = Translate.textStyling(line);
             line = Translate.imageLinks(line);
+            line = Translate.pageLinks(line);
 
-            char[] chars = line.toCharArray();
-            line  = "";
-            for(char c : chars) {
-                if(c == '\\') {
-                    line += "\\\\";
-                } else {
-                    line += c;
-                }
-            } 
+            // Escape backslashes
+            line = line.replace("\\", "\\\\");
+
             result[index] = line;
             index++;
         }
