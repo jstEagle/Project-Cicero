@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/ComplexExponents/+page.svelte";
+export { default as component } from "../../../../src/routes/A2-Math-Pure/A2-Pure-Course/+page.svelte";

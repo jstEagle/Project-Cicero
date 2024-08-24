@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/DivisionofComplexNumbers/+page.svelte";
+export { default as component } from "../../../../src/routes/A2-Math-Pure/Calculus-A2/Differential-Equations/+page.svelte";

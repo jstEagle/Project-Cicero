@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/ComplexNumbersA2/+page.svelte";
+export { default as component } from "../../../../src/routes/A2-Math-Pure/Absolute-Value-Equations/+page.svelte";

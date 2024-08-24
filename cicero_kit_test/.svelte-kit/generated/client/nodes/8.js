@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/Polarform/+page.svelte";
+export { default as component } from "../../../../src/routes/A2-Math-Pure/Calculus-A2/Differentiating-inverse-tangent/+page.svelte";

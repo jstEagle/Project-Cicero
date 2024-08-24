@@ -3,8 +3,12 @@ import java.nio.file.*;
 
 public class RenameFilesInDirectory {
     public static void main(String[] args) {
-        Path directoryPath = Paths.get("folderTest"); // Replace with your directory path
+        Path directoryPath = Paths.get("Attachements"); // Replace with your directory path
 
+        rename(directoryPath);
+    }
+
+    public static void rename(Path directoryPath) {
         try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(directoryPath)) {
             for (Path path : directoryStream) {
                 if (Files.isRegularFile(path)) {
@@ -21,6 +25,9 @@ public class RenameFilesInDirectory {
                     Files.move(path, newFilePath);
                     
                     System.out.println("Renamed: " + oldFileName + " to " + newFileName);
+                }
+                else if(Files.isDirectory(directoryPath)) {
+                    rename(path);
                 }
             }
         } catch (IOException e) {

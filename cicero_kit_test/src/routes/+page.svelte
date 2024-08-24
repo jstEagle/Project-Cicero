@@ -2,9 +2,9 @@
     import '$lib/global.css';
 </script>
 
-<h1>Welcome to SvelteKit</h1>
+<h1>A Level Math Notes</h1>
 <div class="container">
-    <a href="/ComplexExponents">ComplexExponents</a>
+    <a href="/A2Output/Absolute-Value-Equations">AbsoluteValues</a>
     <a href="/ComplexNumbersA2">ComplexNumbersA2</a>
     <a href="/ComplexNumbersintro">ComplexNumbersintro</a>
     <a href="/ComplexPlane">ComplexPlane</a>

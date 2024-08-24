@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/ComplexPlane/+page.svelte";
+export { default as component } from "../../../../src/routes/A2-Math-Pure/Calculus-A2/Calculus-A2/+page.svelte";
