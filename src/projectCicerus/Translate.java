@@ -38,6 +38,13 @@ public class Translate {
         return line.replaceAll("\\$\\$(.*?)\\$\\$", "<Katex math={\"" + "$1" + "\"} displayMode/>");
     }
 
+    public static String inlineStyling(String line) {
+        line = line.trim();
+        line = line.replaceAll("**(.*?)**", "<b>" + "$1" + "</b>"); //Handles bold text
+        line = line.replaceAll("_(.*?)_", "<i>" + "$1" + "</i>"); //Handles italic text
+        return line;
+    }
+
     public static String inlineEquations(String line) {
         line = line.trim();
         return line.replaceAll("\\$(.*?)\\$", "<Katex math={\"" + "$1" + "\"}/>");

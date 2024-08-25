@@ -115,6 +115,7 @@ public class Main {
                 line = Translate.displayEquations(line);
                 line = Translate.inlineEquations(line);
                 line = Translate.textStyling(line);
+                line = Translate.inlineStyling(line);
                 line = Translate.imageLinks(line);
                 line = Translate.pageLinks(line, directoryPath);
 
