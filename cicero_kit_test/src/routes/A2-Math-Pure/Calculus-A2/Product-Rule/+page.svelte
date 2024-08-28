@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Product-Rule</title></svelte:head><div class="note">
-   <h1 class="title">Product-Rule</h1>
+   <h1 class="title">Product Rule</h1>
 <h2 class="heading"> <Katex math={"(f * g)' = f'*g + f *g'"} displayMode/></h2>
 <h3 class="divider">Made by jstEagle ;)</h3>
 <p></p>

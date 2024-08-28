@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Complex-Numbers-intro</title></svelte:head><div class="note">
-   <h1 class="title">Complex-Numbers-intro</h1>
+   <h1 class="title">Complex Numbers intro</h1>
 <p>The ancient Greeks thought <Katex math={"x+10=9"}/> had no solution because no one had thought of negative numbers. <b>All real numbers are complex numbers but only some complex numbers are real</b></p>
 <h2 class="heading"> <Katex math={"i = \\sqrt{-1}"} displayMode/></h2>
 <h2 class="heading"> <Katex math={"i^2 = -1"} displayMode/></h2>

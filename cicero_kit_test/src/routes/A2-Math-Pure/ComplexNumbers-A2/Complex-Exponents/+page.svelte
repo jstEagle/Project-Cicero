@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Complex-Exponents</title></svelte:head><div class="note">
-   <h1 class="title">Complex-Exponents</h1>
+   <h1 class="title">Complex Exponents</h1>
 <h2 class="heading"> <Katex math={"e^{i\\theta} = \\cos\\theta + i\\sin\\theta "} displayMode/></h2>
 <h3 class="divider">Made by jstEagle ;)</h3>
 <p></p>

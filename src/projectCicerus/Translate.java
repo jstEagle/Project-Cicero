@@ -40,8 +40,8 @@ public class Translate {
 
     public static String inlineStyling(String line) {
         line = line.trim();
-        line = line.replaceAll("**(.*?)**", "<b>" + "$1" + "</b>"); //Handles bold text
-        line = line.replaceAll("_(.*?)_", "<i>" + "$1" + "</i>"); //Handles italic text
+        line = line.replaceAll("\\*\\*(.*?)\\*\\*", "<b>" + "$1" + "</b>"); //Handles bold text
+        line = line.replaceAll("\\_(.*?)\\_", "<i>" + "$1" + "</i>"); //Handles italic text
         return line;
     }
 

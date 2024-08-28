@@ -9,8 +9,8 @@ import java.util.ArrayList;
 public class Main {
     public static Path directoryPath;
     public static void main(String[] args) {
-        directoryPath = Paths.get("A2Pure");
-        Path outputDirectoryPath = Paths.get("A2Output");
+        directoryPath = Paths.get("ASStats");
+        Path outputDirectoryPath = Paths.get("ASStatsOutput");
 
         createFiles(directoryPath, outputDirectoryPath);
     }

@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Vectors-A2</title></svelte:head><div class="note">
-   <h1 class="title">Vectors-A2</h1>
+   <h1 class="title">Vectors A2</h1>
 <h4 class="heading"> Vector - magnitude and direction</h4>
 <h4 class="heading"> Scalar - magnitude only</h4>
 <p></p>

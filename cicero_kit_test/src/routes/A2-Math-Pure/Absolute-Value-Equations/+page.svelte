@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Absolute-Value-Equations</title></svelte:head><div class="note">
-   <h1 class="title">Absolute-Value-Equations</h1>
+   <h1 class="title">Absolute Value Equations</h1>
 <p>The modulus (also known as absolute) value function is written as <Katex math={"|x|"}/> and it is defined as <Katex math={"|x| = \\begin{Bmatrix} -x, \\ if\\ x \\le 0 \\\\ x, \\ if\\ x \\ge 0 \\end{Bmatrix}"}/></p>
 <p>You can also write <Katex math={"|a| = |b| \\leftarrow \\rightarrow a^2 = b^2"}/>, because the quadratic power will make any negative positive and then you take the surd and the function becomes the original function.</p>
 <p></p>

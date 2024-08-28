@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Modelling-Curves</title></svelte:head><div class="note">
-   <h1 class="title">Modelling-Curves</h1>
+   <h1 class="title">Modelling Curves</h1>
 <h2 class="heading"> Power Function</h2>
 <h2 class="heading"> <Katex math={"y=kx^n"} displayMode/></h2>
 <h2 class="heading"> <Katex math={"x\\ is\\ to\\ the\\ power\\ n"} displayMode/></h2>

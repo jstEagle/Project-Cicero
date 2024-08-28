@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Parametric-Equations</title></svelte:head><div class="note">
-   <h1 class="title">Parametric-Equations</h1>
+   <h1 class="title">Parametric Equations</h1>
 <h2 class="heading"> <Katex math={"\\frac{dy}{dx} = \\frac{dy}{\\cancel{dt}} * \\frac{\\cancel{dt}}{dx}"} displayMode/></h2>
 <h2 class="heading"> <Katex math={"Since\\ \\frac{dt}{dx} = \\frac{1}{\\frac{dx}{dt}} \\rightarrow \\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}} \\ \\ if\\ \\frac{dx}{dt} \\ne 0"} displayMode/></h2>
 <h2 class="heading"> <Katex math={" ax + by + c = 0\\ \\ \\ \\ \\ a \\in \\mathbb{z} "} displayMode/></h2>

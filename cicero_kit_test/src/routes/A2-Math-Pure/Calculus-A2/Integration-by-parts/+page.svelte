@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Integration-by-parts</title></svelte:head><div class="note">
-   <h1 class="title">Integration-by-parts</h1>
+   <h1 class="title">Integration by parts</h1>
 <h2 class="heading"> <Katex math={"\\int u*v' = u*v - \\int u'*v"} displayMode/></h2>
 <h2 class="heading"> <Katex math={"\\int^b_au*v' = [u*v]^b_a - \\int^b_au' * v"} displayMode/></h2>
 <h3 class="divider">Made by jstEagle ;)</h3>

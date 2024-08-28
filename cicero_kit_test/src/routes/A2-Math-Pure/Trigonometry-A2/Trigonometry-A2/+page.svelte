@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Trigonometry-A2</title></svelte:head><div class="note">
-   <h1 class="title">Trigonometry-A2</h1>
+   <h1 class="title">Trigonometry A2</h1>
 <div class="link-container"><a href="//">- Reciprocal Trigonometry Functions</a></div>
 <div class="link-container"><a href="//">- Compound Angles</a></div>
 <div class="link-container"><a href="//">- Double Angles</a></div>

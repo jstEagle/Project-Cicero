@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Complex-Plane</title></svelte:head><div class="note">
-   <h1 class="title">Complex-Plane</h1>
+   <h1 class="title">Complex Plane</h1>
 <p>All real numbers are represented by points on the x-axis which is therefore called the <b>real axis</b>. Pure imaginary numbers are represented as points on the y-axis which is called the <b>imaginary-axis</b>.</p>
 <p>These are labelled <b>RE</b> and <b>IM</b> respectively.</p>
 <h3 class="divider">Made by jstEagle ;)</h3>

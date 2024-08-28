@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Numerical-Methods</title></svelte:head><div class="note">
-   <h1 class="title">Numerical-Methods</h1>
+   <h1 class="title">Numerical Methods</h1>
 <p>Whenever possible we try to find the root of equations using algebraic methods. However when this doesn't work another way of finding them is to use numerical methods.</p>
 <p></p>
 <p>Numerical methods are methods used to find the roots of functions that cannot be found algebraically or can only be found with great difficulty.</p>

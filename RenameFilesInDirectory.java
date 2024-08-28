@@ -3,9 +3,12 @@ import java.nio.file.*;
 
 public class RenameFilesInDirectory {
     public static void main(String[] args) {
-        Path directoryPath = Paths.get("Attachements"); // Replace with your directory path
+        String[] dirs = {"A2Stats", "ASPure", "ASStats"};
 
-        rename(directoryPath);
+        for(String s : dirs) {
+            Path directoryPath = Paths.get(s); // Replace with your directory path
+            rename(directoryPath);
+        }
     }
 
     public static void rename(Path directoryPath) {

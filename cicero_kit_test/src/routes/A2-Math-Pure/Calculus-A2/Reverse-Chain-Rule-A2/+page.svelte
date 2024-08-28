@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Reverse-Chain-Rule-A2</title></svelte:head><div class="note">
-   <h1 class="title">Reverse-Chain-Rule-A2</h1>
+   <h1 class="title">Reverse Chain Rule A2</h1>
 <h2 class="heading"> <Katex math={"\\int g(x)^n *dx = \\frac{g(x)^{n+1}}{n+1} * \\frac{1}{g'(x)} "} displayMode/></h2>
 <h2 class="heading"> <Katex math={"\\int(4x+5)^6 * dx = \\frac{(4x+5)^7}{7} * \\frac{1}{4} "} displayMode/></h2>
 <h3 class="divider">Made by jstEagle ;)</h3>

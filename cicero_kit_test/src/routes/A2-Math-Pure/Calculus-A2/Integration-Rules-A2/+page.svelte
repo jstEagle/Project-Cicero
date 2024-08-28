@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Integration-Rules-A2</title></svelte:head><div class="note">
-   <h1 class="title">Integration-Rules-A2</h1>
+   <h1 class="title">Integration Rules A2</h1>
 <h2 class="heading"> <Katex math={"\\int \\sin x \\rightarrow -\\cos x"} displayMode/></h2>
 <h2 class="heading"> <Katex math={"\\int \\cos x \\rightarrow \\sin x"} displayMode/></h2>
 <h2 class="heading"> <Katex math={"\\int \\sec^2x \\rightarrow \\tan x"} displayMode/></h2>

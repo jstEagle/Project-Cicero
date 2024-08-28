@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Differentiating-trigonometric-functions</title></svelte:head><div class="note">
-   <h1 class="title">Differentiating-trigonometric-functions</h1>
+   <h1 class="title">Differentiating trigonometric functions</h1>
 <h2 class="heading"> <Katex math={"y=\\cos(x) \\rightarrow \\frac{dy}{dx} = -\\sin(x)"} displayMode/></h2>
 <h2 class="heading"> <Katex math={"y=\\sin(x) \\rightarrow \\frac{dy}{dx} = \\cos(x)"} displayMode/></h2>
 <h2 class="heading"> <Katex math={"y=\\tan(x) \\rightarrow \\frac{dy}{dx} = \\sec^2(x)"} displayMode/></h2>

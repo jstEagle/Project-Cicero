@@ -5,6 +5,7 @@
     import { slide } from 'svelte/transition';
     import { writable } from 'svelte/store';
     import { onMount } from 'svelte';
+    import { page } from '$app/stores';
 
     export let tree = {};
 
@@ -35,7 +36,7 @@
     {#each Object.entries(tree) as [key, value]}
         <div class="tree-item">
         {#if value.path}
-            <a href={value.path}>{value.title}</a>
+            <a class:isActive={$page.url.pathname === value.path} href={value.path}>{value.title}</a>
         {:else}
             <!-- svelte-ignore a11y-click-events-have-key-events -->
             <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -71,6 +72,11 @@
         padding-left: 20px; /* Ensure indentation */
         font-weight: normal;
         user-select: none;
+    }
+
+    .tree-item a.isActive {
+        color: rgb(77, 171, 208);
+        font-weight: bold;
     }
 
     a {

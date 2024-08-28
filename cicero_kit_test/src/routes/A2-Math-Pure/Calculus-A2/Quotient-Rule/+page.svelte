@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Quotient-Rule</title></svelte:head><div class="note">
-   <h1 class="title">Quotient-Rule</h1>
+   <h1 class="title">Quotient Rule</h1>
 <h2 class="heading"> <Katex math={"if\\ h(x) = \\frac{f(x)}{g(x)}"} displayMode/></h2>
 <h2 class="heading"> <Katex math={"\\downarrow"} displayMode/></h2>
 <h2 class="heading"> <Katex math={" h'(x) = \\frac{g(x)f'(x) - f(x)g'(x)}{[g(x)]^2}"} displayMode/></h2>

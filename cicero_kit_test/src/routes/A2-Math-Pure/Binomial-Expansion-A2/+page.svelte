@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Binomial-Expansion-A2</title></svelte:head><div class="note">
-   <h1 class="title">Binomial-Expansion-A2</h1>
+   <h1 class="title">Binomial Expansion-A2</h1>
 <h2 class="heading"> <Katex math={"(1 + x)^n = 1 + nx + \\frac{n(n-1)}{2!}*x^2 + \\frac{n(n-1)(n-2)}{3!}*x^3 + ... + \\frac{n(n-1)...(n-r + 1)}{r!}*x^r"} displayMode/></h2>
 <p><b>Only works when the format is <Katex math={"(1 + x)^n"}/> and with the restriction <Katex math={"|x| < 1"}/>.</b></p>
 <h3 class="divider">Made by jstEagle ;)</h3>

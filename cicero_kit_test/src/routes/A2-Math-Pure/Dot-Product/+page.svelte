@@ -4,5 +4,5 @@
 </script>
 
 <svelte:head><title>Dot-Product</title></svelte:head><div class="note">
-   <h1 class="title">Dot-Product</h1>
+   <h2 class="title">Dot Product</h2>
 </div>

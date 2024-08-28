@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Exponential-Graphs</title></svelte:head><div class="note">
-   <h1 class="title">Exponential-Graphs</h1>
+   <h1 class="title">Exponential Graphs</h1>
 <p><Katex math={" - (\\frac32)^{x-5} + 2"} displayMode/></p>
 <p>1 vertical stretch / 1 vertical shift</p>
 <p>1 horizontal shift</p>

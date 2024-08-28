@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Differentiating-natural-logs-and-exponentials</title></svelte:head><div class="note">
-   <h1 class="title">Differentiating-natural-logs-and-exponentials</h1>
+   <h1 class="title">Differentiating natural logs and exponentials</h1>
 <h2 class="heading"> <Katex math={"y = \\ln x \\rightarrow \\frac{dy}{dx} = \\frac1x\\ \\ \\ \\ \\ | \\ \\ \\ \\ \\ y=e^x\\rightarrow \\frac{dy}{dx} = e^x"} displayMode/></h2>
 <h2 class="heading"> <Katex math={"y =a \\ln x \\rightarrow \\frac{dy}{dx} = \\frac{a}x\\ \\ \\ \\ \\ | \\ \\ \\ \\ \\ y = ae^x \\rightarrow \\frac{dy}{dx} = ae^x"} displayMode/></h2>
 <h2 class="heading"> <Katex math={"y = \\ln ax \\rightarrow \\frac{dy}{dx} = \\frac{a}{ax} = \\frac1x\\ \\ \\ \\ \\ | \\ \\ \\ \\ \\ y = e^{ax} \\rightarrow \\frac{dy}{dx} = a e^{ax}"} displayMode/></h2>

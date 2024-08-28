@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Reciprocal-Trigonometry-Functions</title></svelte:head><div class="note">
-   <h1 class="title">Reciprocal-Trigonometry-Functions</h1>
+   <h1 class="title">Reciprocal Trigonometry Functions</h1>
 <h2 class="heading"> Cosecant</h2>
 <img src="/graphs/ReciprocalTrigonometryFunctions0.png" alt="graph">
 <p>On the graph above, the reciprocal of <Katex math={"\\sin \\theta = y"}/> is drawn (in blue) as <Katex math={"\\csc \\theta = \\frac{1}{\\sin \\theta} = \\frac{H}O = \\frac{r}{y}"}/></p>

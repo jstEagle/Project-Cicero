@@ -4,5 +4,5 @@
 </script>
 
 <svelte:head><title>Argand-Diagrams</title></svelte:head><div class="note">
-   <h1 class="title">Argand-Diagrams</h1>
+   <h1 class="title">Argand Diagrams</h1>
 </div>

@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>U---substitution</title></svelte:head><div class="note">
-   <h1 class="title">U---substitution</h1>
+   <h1 class="title">U substitution</h1>
 <p><Katex math={"\\int 2x(x^2 + 1)^3*dx"} displayMode/></p>
 <p><Katex math={"\\int 2x*u^3*dx"} displayMode/></p>
 <p><Katex math={"x^2 + 1 = u"} displayMode/></p>

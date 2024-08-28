@@ -9,10 +9,11 @@ import java.util.ArrayList;
 public class MakeRoutesFile {
     public static Map<String, String> result = new HashMap<>();
    public static void main(String[] args) {
-        Path directoryPath = Paths.get("A2-Math-Pure"); // Replace with your directory path
+        String folderPath = "AS-Math-Pure";
+        Path directoryPath = Paths.get(folderPath); // Replace with your directory path
 
         getRoutes(directoryPath);
-        makeRoutes();
+        makeRoutes(folderPath);
     }
 
     public static void getRoutes(Path directoryPath) {
@@ -37,8 +38,8 @@ public class MakeRoutesFile {
         }
     }
 
-    public static void makeRoutes() {
-        Path newFilePath = Paths.get("routes.js");
+    public static void makeRoutes(String path) {
+        Path newFilePath = Paths.get(path + "Routes.js");
         if (Files.notExists(newFilePath)) {
             try {
                 Files.createFile(newFilePath);

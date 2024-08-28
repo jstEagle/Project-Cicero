@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Differential-Equations</title></svelte:head><div class="note">
-   <h1 class="title">Differential-Equations</h1>
+   <h1 class="title">Differential Equations</h1>
 <p>Newtons law of cooling results in the differential equation: <Katex math={"\\frac{dT}{dt} = k(T- T_0)"}/> </p>
 <p>We use differential equations to find information in real life situations.</p>
 <p></p>

@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Partial-Fractions</title></svelte:head><div class="note">
-   <h1 class="title">Partial-Fractions</h1>
+   <h1 class="title">Partial Fractions</h1>
 <h2 class="heading"> <Katex math={"\\frac{px + q}{(ax + b)(cx + d)(ex + f)} \\equiv \\frac{A}{(ax + b)} + \\frac{B}{(cx + d)} + \\frac{C}{(ex + f)}"} displayMode/></h2>
 <h2 class="heading"> <Katex math={"\\frac{px^2 + qx + r}{(ax + b)(cx^2 + d)} \\equiv \\frac{A}{(ax + b)} + \\frac{Bx + C}{(cx^2 + d)}"} displayMode/></h2>
 <h2 class="heading"> <Katex math={"\\frac{px^2 + qx + r}{(ax + b)(cx + d)^2} \\equiv \\frac{A}{(ax + b)} + \\frac{B}{(cx + d)} + \\frac{C}{(cx + d)^2}"} displayMode/></h2>

@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Euler's-Number</title></svelte:head><div class="note">
-   <h1 class="title">Euler's-Number</h1>
+   <h1 class="title">Euler's Number</h1>
 <h2 class="heading"> <Katex math={"e = 2.7182818..."} displayMode/></h2>
 <h2 class="heading"> <Katex math={"y = e^x"} displayMode/></h2>
 <h2 class="heading"> <Katex math={"\\ln_ey = x"} displayMode/></h2>

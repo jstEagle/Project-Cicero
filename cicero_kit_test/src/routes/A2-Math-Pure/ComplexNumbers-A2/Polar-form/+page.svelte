@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Polar-form</title></svelte:head><div class="note">
-   <h1 class="title">Polar-form</h1>
+   <h1 class="title">Polar form</h1>
 <h2 class="heading"> The modulus-argument form of complex numbers</h2>
 <p>The position of the point <Katex math={"z"}/> in an Argand diagram can be described by means of the length of the line connecting this point to the origin, and the angle which this line makes with the positive real axis.</p>
 <h3 class="divider">Made by jstEagle ;)</h3>

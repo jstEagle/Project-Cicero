@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Division-of-Complex-Numbers</title></svelte:head><div class="note">
-   <h1 class="title">Division-of-Complex-Numbers</h1>
+   <h1 class="title">Division of Complex Numbers</h1>
 <p>Two complex numbers <Katex math={"z = x+iy"}/> and <Katex math={"w=u+iv"}/> are equal if both <Katex math={"x=u"}/> and <Katex math={"y=v"}/>. If <Katex math={"u\\ne x"}/> and <Katex math={"v\\ne y"}/>, or both, then z and w are not equal.</p>
 <p>So for two complex numbers to be equal, the real parts must be equal and the imaginary parts must be equal. When we use this result we say that we are equating real and imaginary parts.</p>
 <p>Equating real and imaginary parts is a very useful method which often yields 'two for the price of one' when working with complex numbers.</p>

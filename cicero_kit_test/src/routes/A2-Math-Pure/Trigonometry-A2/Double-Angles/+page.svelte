@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Double-Angles</title></svelte:head><div class="note">
-   <h1 class="title">Double-Angles</h1>
+   <h1 class="title">Double Angles</h1>
 <h2 class="heading"> <Katex math={" \\sin(2A) = 2\\sin(A)\\cos(A)"} displayMode/></h2>
 <h2 class="heading"> <Katex math={"\\cos(2A) = 1 - 2\\sin^2(A)"} displayMode/></h2>
 <h2 class="heading"> <Katex math={"\\cos(2A) = 2\\cos^2(A) - 1"} displayMode/></h2>

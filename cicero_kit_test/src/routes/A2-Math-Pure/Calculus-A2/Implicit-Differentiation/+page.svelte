@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head><title>Implicit-Differentiation</title></svelte:head><div class="note">
-   <h1 class="title">Implicit-Differentiation</h1>
+   <h1 class="title">Implicit Differentiation</h1>
 <p>A function is usually defined <b>explicitly</b> by means of a formula:</p>
 <p><Katex math={"f(x) - x^2 - x = 2\\ \\ \\ or\\ \\ \\ y= \\sqrt{2x-1}"} displayMode/></p>
 <p>Both the above examples can be differentiated by using the rules. However, sometimes the value <Katex math={"y = f(x)"}/> is not given by such a direct formula. Sometimes making y the subject of the formula requires difficult algebra such as:</p>
