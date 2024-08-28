@@ -26,7 +26,7 @@ export const routes = [
  { path: '/A2-Math-Pure/Trigonometry-A2/Double-Angles', title: 'Double Angles' },
  { path: '/A2-Math-Pure/Trigonometry-A2/Compound-Angles', title: 'Compound Angles' },
  { path: '/A2-Math-Pure/Trigonometry-A2/Reciprocal-Trigonometry-Functions', title: 'Reciprocal Trigonometry Functions' },
- { path: '/A2-Math-Pure/Trigonometry-A2/R---Method', title: 'R   Method' },
+ { path: '/A2-Math-Pure/Trigonometry-A2/R-Method', title: 'R-Method' },
  { path: '/A2-Math-Pure/Trigonometry-A2/Trigonometry-A2', title: 'Trigonometry A2' },
  { path: '/A2-Math-Pure/Numerical-Methods', title: 'Numerical Methods' },
  { path: '/A2-Math-Pure/Partial-Fractions', title: 'Partial Fractions' },

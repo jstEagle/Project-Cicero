@@ -83,10 +83,15 @@
         max-height: 40px; /* Set a max-height to prevent it from becoming too large */
         width: auto;
         transform: scale(3);
+        
     }
 
     .home-button:hover .home-icon {
         opacity: 0.6;
+    }
+
+    .home-button:focus .home-icon {
+        transform: scale(2.5);
     }
 
     .content {

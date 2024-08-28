@@ -16,6 +16,8 @@
   }
 
   function navigateTo(path) {
+    searchQuery = '';
+    search();
     goto(path);
   }
 </script>
@@ -67,7 +69,7 @@
     font-weight: normal;
     margin: 0.5rem 0;
     padding-left: 20px; /* Ensure indentation */
-    color: #333333;
+    color: rgb(77, 171, 208);
     opacity: 0.6;
     user-select: none;
   }

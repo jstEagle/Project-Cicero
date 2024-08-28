@@ -88,7 +88,7 @@ export const dictionary = {
 		"/A2-Math-Pure/Remainder-Theorem": [37],
 		"/A2-Math-Pure/Trigonometry-A2/Compound-Angles": [38],
 		"/A2-Math-Pure/Trigonometry-A2/Double-Angles": [39],
-		"/A2-Math-Pure/Trigonometry-A2/R---Method": [40],
+		"/A2-Math-Pure/Trigonometry-A2/R-Method": [40],
 		"/A2-Math-Pure/Trigonometry-A2/Reciprocal-Trigonometry-Functions": [41],
 		"/A2-Math-Pure/Trigonometry-A2/Trigonometry-A2": [42],
 		"/A2-Math-Pure/Vectors-A2": [43]
