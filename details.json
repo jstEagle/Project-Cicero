@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "title": "Project Cicero",
+  "description": "A JavaScript tool for converting Obsidian Markdown files into HTML.",
+  "tags": [
+    "JavaScript",
+    "Markdown",
+    "Obsidian",
+    "HTML"
+  ],
+  "featured": false,
+  "order": 260,
+  "links": {
+    "repo": "https://github.com/jstEagle/Project-Cicero"
+  },
+  "images": []
+}
